@@ -54,7 +54,8 @@ function createButtonWithCallback(className, text, style, callback) {
 function urlDomain(urlString) {
     const a = document.createElement('a');
     a.href = urlString;
-    return a.hostname;
+    const parts = a.hostname.split('.');
+    return parts.slice(parts.length - 2, parts.length - 1)[0];
 }
 
 function setLocalStorageKey(key, value) {

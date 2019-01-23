@@ -87,7 +87,7 @@ function searchHost(host) {
     document.getElementById('search_input').value = '';
 
     console.log('Searching for host ' + host);
-    return _doSearch(host, true);
+    return _doSearch(host, false);
 }
 
 function _faviconUrl() {
